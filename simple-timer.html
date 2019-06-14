@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>SIMPLE TIMER</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<style type="text/css">
+	.container{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	.counter{
+		font-size: 3em;
+		font-weight: bolder;
+		flex-direction: column;
+	}
+
+	.backdrop{
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 100%;
+		z-index: 100;
+		background: white;
+		opacity: .6;
+	}
+
+	
+	.modal1{
+		width: 40%;
+		display: block;
+		position: fixed;
+		left: 30%;
+		top: 10vh;
+		/*margin: 30% auto;*/
+		z-index: 999;
+		border: 1px solid black;
+		background: white;
+		padding: 10%;
+	}
+	.hide{
+		display: none;
+	}
+
+	@media (max-width: 599px){
+		.modal1{
+			width: 100%;
+			left: 0;
+		}
+	}
+
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="backdrop hide">
+			
+		</div>
+		<div class="modal1 hide">
+					Your questions are complete!
+				</div>
+		<div class="row">
+			<div class="col-md-4">
+				
+			</div>
+			<div class="col-md-4">
+				<div class="counter center">0
+
+				</div>
+				<button class="btn btn-success question-control">Start</button>
+			</div>
+			<div class="col-md-4">&nbsp</div>
+		</div>
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<div class="card">
+					<div class="card-head" id="question"></div>
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-12">
+								<input type="radio" name="ans" value="ansa"> A: <p id="ansa">Answer A</p>
+							</div>
+							<div class="col-md-12">
+								<input type="radio" name="ans" value="ansb"> B: <p id="ansb">Answer B</p>
+							</div>
+							<div class="col-md-12">
+								<input type="radio" name="ans" value="ansc">C: <p id="ansc">Answer C</p>
+							</div>
+							<div class="col-md-12">
+								<input type="radio" name="ans" value="ansd"> D: <p id="ansd">Answer D</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2">
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="timerjs.js"></script>
+</body>
+</html>
